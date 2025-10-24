@@ -61,7 +61,7 @@ renovation_agent/
 
     Hello. Generate Proposal Document for the kitchen remodel requirement in a proper format that applies to a renovation contract. Remember     this text will eventually be stored as a pdf file so make sure to have the formatting appropriate. I have no other specification.
 
-✅ Expected Result
+## ✅ Expected Result
 
 * Agent returns a well-formatted renovation proposal (UI/CLI) OR
 
