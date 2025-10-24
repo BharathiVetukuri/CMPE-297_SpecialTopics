@@ -58,7 +58,7 @@ Option 2 — CLI
 
 ## 🧪 Demo Flow (with Screenshot Slots)
 
-1) Start a New Session (Greeting)
+### 1) Start a New Session (Greeting)
 
 
 Prompt:
@@ -69,8 +69,9 @@ Expected: Agent lists capabilities (currency conversion, weather check, Wikipedi
 <img width="1439" height="858" alt="Screenshot 2025-10-23 at 9 56 24 PM" src="https://github.com/user-attachments/assets/8835fbbc-22a2-4ff6-b867-6b0ea1b14109" />
 
 
+---
 
-2) Currency Conversion Tool
+### 2) Currency Conversion Tool
 
 Prompt (example):
 Convert 125 EUR to USD.
@@ -80,8 +81,8 @@ Expected: Tool is invoked; agent responds with converted amount and (optionally)
 
 <img width="1439" height="858" alt="Screenshot 2025-10-23 at 10 00 18 PM" src="https://github.com/user-attachments/assets/edec856e-ad07-4b2f-9814-28674117fb31" />
 
-
-3) Weather Check Tool
+---
+### 3) Weather Check Tool
 
 Prompt (example):
 What’s the weather in San Jose, CA right now?
@@ -91,13 +92,13 @@ Expected: Tool returns current conditions (temp/summary), possibly a short forec
 
 <img width="1439" height="858" alt="Screenshot 2025-10-23 at 10 08 01 PM" src="https://github.com/user-attachments/assets/4538f706-50c2-4a75-bcb8-f63ab6f34b38" />
 
-
-4) Currency and Weather Check Tool
+---
+### 4) Currency and Weather Check Tool
 
 <img width="1439" height="858" alt="Screenshot 2025-10-23 at 10 09 01 PM" src="https://github.com/user-attachments/assets/48da53b8-3632-4843-b9ef-6f30a07005ee" />
 
-
-4) Wikipedia Search Tool
+---
+### 5) Wikipedia Search Tool
 
 Prompt (example):
 Search Wikipedia for "Basel Switzerland" and summarize the key highlights in 4 bullet points.
