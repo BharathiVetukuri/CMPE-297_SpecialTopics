@@ -1,0 +1,5 @@
+google-adk==1.14.1
+google-cloud-aiplatform==1.115.0
+pdfplumber
+python-dotenv
+reportlab==4.4.4
