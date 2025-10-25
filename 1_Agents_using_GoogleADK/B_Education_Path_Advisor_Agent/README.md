@@ -32,14 +32,23 @@ https://youtu.be/HVWtdzB9MIw
 ## 📁 Project Structure
 
 education_path_advisor/
+
 ├─ education_advisor/
+
 │  ├─ agent.py
+
 │  ├─ prompt.py
+
 │  └─ sub_agents/
+
 ├─ tests/
+
 ├─ eval/
+
 ├─ .env.example
+
 ├─ pyproject.toml
+
 └─ README.md
 
 
