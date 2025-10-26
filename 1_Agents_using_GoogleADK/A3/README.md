@@ -38,6 +38,11 @@ MCP Toolbox UI - Hotel Search by Name
 <img width="1439" height="860" alt="Screenshot 2025-10-25 at 11 35 04 PM" src="https://github.com/user-attachments/assets/b515b890-ffb3-4a4b-a9c2-57031919b0e0" />
 
 
+Gemini CLI
+
+<img width="2878" height="1720" alt="image" src="https://github.com/user-attachments/assets/f8559fe8-9f18-4464-93b0-6bfad356d5f0" />
+
+
 
 ### 🧭 Overview
 
