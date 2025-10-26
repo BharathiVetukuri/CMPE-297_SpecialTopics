@@ -41,16 +41,16 @@ Each part includes runnable code, a focused README with steps, screenshots, and 
 
 
 ## 📁 Repository Structure
-.
-├─ A1_From_Prototypes_to_Agents_with_ADK/
-│  ├─ README.md
-│  └─ (code, screenshots, video link)
-├─ A2_Building_AI_Agents_with_ADK_Tools/
-│  ├─ README.md
-│  └─ (code, screenshots, video link)
-├─ A3_Travel_Agent_MCP_Toolbox_ADK/
-│  ├─ README.md
-│  └─ (code, screenshots, video link)
-└─ B_Education_Path_Advisor/
-   ├─ README.md
-   └─ (code, screenshots, video link)
+      .
+      ├─ A1_From_Prototypes_to_Agents_with_ADK/
+      │  ├─ README.md
+      │  └─ (code, screenshots, video link)
+      ├─ A2_Building_AI_Agents_with_ADK_Tools/
+      │  ├─ README.md
+      │  └─ (code, screenshots, video link)
+      ├─ A3_Travel_Agent_MCP_Toolbox_ADK/
+      │  ├─ README.md
+      │  └─ (code, screenshots, video link)
+      └─ B_Education_Path_Advisor/
+         ├─ README.md
+         └─ (code, screenshots, video link)
