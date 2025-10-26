@@ -47,6 +47,11 @@ Hotel Agent App
 <img width="1439" height="860" alt="Screenshot 2025-10-25 at 11 52 43 PM" src="https://github.com/user-attachments/assets/a514fff5-e802-4d61-abd8-99bf8ad69501" />
 
 
+Connecting Agents to Tools
+
+<img width="2878" height="1720" alt="image" src="https://github.com/user-attachments/assets/88d813f7-9e2c-4a89-b4ce-df91f65f4004" />
+
+
 ### 🧭 Overview
 
 The MCP Toolbox for Databases runs as a local MCP server exposing tools such as:
