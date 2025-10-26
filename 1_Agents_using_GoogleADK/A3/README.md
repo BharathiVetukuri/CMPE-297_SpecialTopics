@@ -14,43 +14,52 @@ This project implements a simple Hotel/Travel Agent that talks to an MCP Databas
 
 ### 🎥 YouTube demo:
 
-https://youtu.be/YOUR_VIDEO_ID
+https://youtu.be/AxM5fTxBwww 
 
 
 ### Screenshots
 
-1. 
+**Cloud SQL Instance**
 
+<img width="2878" height="1096" alt="image" src="https://github.com/user-attachments/assets/06c0339a-07b9-4d36-8b15-f4eb355b9373" />
 
-MCP Toolbox UI
+---
+
+**MCP Toolbox UI**
 
 <img width="1439" height="860" alt="Screenshot 2025-10-25 at 11 31 27 PM" src="https://github.com/user-attachments/assets/bfb33568-2e60-4922-b7ff-d86cea91aabf" />
 
+---
 
-MCP Toolbox UI - Hotel Search by Location
+**MCP Toolbox UI - Hotel Search by Location**
 
 <img width="1439" height="860" alt="Screenshot 2025-10-25 at 11 34 21 PM" src="https://github.com/user-attachments/assets/36a10d4a-790b-4233-a69f-37452ee833bb" />
 
+---
 
-
-MCP Toolbox UI - Hotel Search by Name
+**MCP Toolbox UI - Hotel Search by Name**
 
 <img width="1439" height="860" alt="Screenshot 2025-10-25 at 11 35 04 PM" src="https://github.com/user-attachments/assets/b515b890-ffb3-4a4b-a9c2-57031919b0e0" />
 
+---
 
-Gemini CLI
+**Gemini CLI**
 
 <img width="2878" height="1720" alt="image" src="https://github.com/user-attachments/assets/f8559fe8-9f18-4464-93b0-6bfad356d5f0" />
 
-Hotel Agent App
+---
+
+**Hotel Agent App**
 
 <img width="1439" height="860" alt="Screenshot 2025-10-25 at 11 52 43 PM" src="https://github.com/user-attachments/assets/a514fff5-e802-4d61-abd8-99bf8ad69501" />
 
+---
 
-Connecting Agents to Tools
+**Connecting Agents to Tools**
 
 <img width="2878" height="1720" alt="image" src="https://github.com/user-attachments/assets/88d813f7-9e2c-4a89-b4ce-df91f65f4004" />
 
+---
 
 ### 🧭 Overview
 
