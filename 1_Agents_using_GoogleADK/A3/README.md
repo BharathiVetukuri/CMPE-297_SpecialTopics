@@ -19,6 +19,14 @@ https://youtu.be/YOUR_VIDEO_ID
 
 ### Screenshots
 
+1. 
+
+
+MCP Toolbox UI
+
+<img width="1439" height="860" alt="Screenshot 2025-10-25 at 11 31 27 PM" src="https://github.com/user-attachments/assets/bfb33568-2e60-4922-b7ff-d86cea91aabf" />
+
+
 ### 🧭 Overview
 
 The MCP Toolbox for Databases runs as a local MCP server exposing tools such as:
