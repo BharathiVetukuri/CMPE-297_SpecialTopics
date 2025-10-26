@@ -42,6 +42,9 @@ Gemini CLI
 
 <img width="2878" height="1720" alt="image" src="https://github.com/user-attachments/assets/f8559fe8-9f18-4464-93b0-6bfad356d5f0" />
 
+Hotel Agent App
+
+<img width="1439" height="860" alt="Screenshot 2025-10-25 at 11 52 43 PM" src="https://github.com/user-attachments/assets/a514fff5-e802-4d61-abd8-99bf8ad69501" />
 
 
 ### 🧭 Overview
