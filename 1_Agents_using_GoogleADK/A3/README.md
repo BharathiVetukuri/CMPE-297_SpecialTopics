@@ -27,6 +27,18 @@ MCP Toolbox UI
 <img width="1439" height="860" alt="Screenshot 2025-10-25 at 11 31 27 PM" src="https://github.com/user-attachments/assets/bfb33568-2e60-4922-b7ff-d86cea91aabf" />
 
 
+MCP Toolbox UI - Hotel Search by Location
+
+<img width="1439" height="860" alt="Screenshot 2025-10-25 at 11 34 21 PM" src="https://github.com/user-attachments/assets/36a10d4a-790b-4233-a69f-37452ee833bb" />
+
+
+
+MCP Toolbox UI - Hotel Search by Name
+
+<img width="1439" height="860" alt="Screenshot 2025-10-25 at 11 35 04 PM" src="https://github.com/user-attachments/assets/b515b890-ffb3-4a4b-a9c2-57031919b0e0" />
+
+
+
 ### 🧭 Overview
 
 The MCP Toolbox for Databases runs as a local MCP server exposing tools such as:
