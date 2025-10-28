@@ -95,6 +95,7 @@ Generated Images:
 
       gs://soumya-unique-bucket/2025-10-28/af146911-a976-4efa-8063-3ed303e14b99/generated_image_0.png
 
+<img width="468" height="700" alt="image" src="https://github.com/user-attachments/assets/20548f9a-5bc8-4af9-a260-1b65bcc5407a" />
 
 
 ## 🧰 Tech Stack
