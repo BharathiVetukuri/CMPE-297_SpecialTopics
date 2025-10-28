@@ -1,56 +1,146 @@
-# AI Agents with Google ADK
+# 🧠 Multi-Agent Image Scoring System using Google ADK, MCP & A2A
 
-This repository contains my completed assignment for AI Agents with the Agent Development Kit (ADK).
-It’s organized into four parts:
+## 🎯 Overview
 
-* A1: From Prototypes to Agents with ADK
+This project implements a **multi-agent system** using the **Google Agent Development Kit (ADK)** and **Action-to-Action (A2A)** protocol.  
+It demonstrates how to design, deploy, and interact with agents that can:
 
-* A2: Building AI Agents with ADK — Empowering with Tools
+- Generate high-quality images based on natural-language prompts  
+- Score the generated images against defined content and design guidelines  
+- Deploy seamlessly to **Vertex AI Agent Engine** for scalable inference  
+- Interoperate via the **A2A API layer**
 
-* A3: Travel Agent using MCP Toolbox for Databases + ADK
+This project was completed as part of the **MCP and A2A Codelabs Assignment**.
 
-* B: Hackathon App — Education Path Advisor
+---
 
-Each part includes runnable code, a focused README with steps, screenshots, and a YouTube walkthrough.
+## 🎥 Demo Video
+🎬 Watch the full walkthrough here:
 
-## 🔗 Quick Links
+---
 
-### A1 — From Prototypes to Agents with ADK
+## 📸 Screenshots
+Stage	Screenshot
+ADK Web UI	
+Vertex AI Deployment	
+A2A Agent Test	
+Generated Image in GCS	
 
-**📂 Code & Steps:** https://github.com/BharathiVetukuri/CMPE-297_SpecialTopics/tree/main/1_Agents_using_GoogleADK/A1_From_Prototypes_to_Agents_with_ADK 
+---
 
-**▶️ YouTube Walkthrough:** https://youtu.be/rzKgwSqIUKM
+## 🧩 Architecture
 
-### A2 — Building AI Agents with ADK: Empowering with Tools
+```mermaid
+graph TD
+A[ADK Root Agent] --> B[Image Generation Agent]
+A --> C[Image Scoring Agent]
+C --> D[Checker Agent]
+D --> E[Vertex AI Agent Engine]
+E --> F[GCS Bucket (for images & artifacts)]
+A2A[A2A API Server] --> A
 
-**📂 Code & Steps:** https://github.com/BharathiVetukuri/CMPE-297_SpecialTopics/tree/main/1_Agents_using_GoogleADK/A2_Building%20AI%20Agents%20with%20ADK/ai-agents-adk
+## Components
 
-**▶️ YouTube Walkthrough:** https://youtu.be/-JRJVEUOZh0
+* image_scoring/	--- Contains the ADK-based root and sub-agents (generation + scoring).
+* image_scoring_adk_a2a_server/ ---	Runs the A2A API server for agent-to-agent communication.
+* testclient/	--- Local test scripts to trigger remote reasoning-engine calls.
+* dist/	--- Wheel and build artifacts generated for deployment.
+* Vertex AI Agent Engine	--- Managed runtime used to deploy and test the agent remotely.
+* GCS Bucket	--- Stores generated images and deployment packages.
 
-### A3 — Travel Agent using MCP Toolbox for Databases + ADK
+## 🚀 Execution Summary
 
-**📂 Code & Steps:** https://github.com/BharathiVetukuri/CMPE-297_SpecialTopics/tree/main/1_Agents_using_GoogleADK/A3_Travel_Agent%20using_MCP_Toolbox
+**1️⃣ Local ADK Testing**
 
-**▶️ YouTube Walkthrough:** https://youtu.be/AxM5fTxBwww
+      adk web
 
-### B — Hackathon App: Education Path Advisor
+→ Open the ADK web UI → test prompts like "Generate an image of a cat riding a bicycle"
 
-**📂 Code & Steps:** https://github.com/BharathiVetukuri/CMPE-297_SpecialTopics/tree/main/1_Agents_using_GoogleADK/B_Education_Path_Advisor_Agent 
+**2️⃣ Deploy to Vertex AI Agent Engine**
 
-**▶️ YouTube Walkthrough:** https://youtu.be/HVWtdzB9MIw
+      python3 -m image_scoring.deploy
+
+→ Creates an Agent Engine on Vertex AI (us-central1)
+→ Prints your reasoningEngine ID.
+
+**3️⃣ Remote Test via Test Client**
+
+      cd testclient
+      python3 remote_test.py
+
+→ Confirms the deployed agent generates and scores images remotely.
+
+**4️⃣ Run A2A API Server**
+
+      cd image_scoring_adk_a2a_server
+      export GOOGLE_CLOUD_PROJECT=assignment2-476319
+      export GOOGLE_CLOUD_LOCATION=us-central1
+      export GCS_BUCKET_NAME=soumya-unique-bucket
+      adk api_server --a2a --port 8001 remote_a2a
+
+**5️⃣ Test A2A Agent**
+
+      curl http://localhost:8001/a2a/image_scoring/.well-known/agent.json
+      
+      curl -X POST http://localhost:8001/a2a/image_scoring \
+        -H 'Content-Type: application/json' \
+        -d '{
+          "id": "uuid-123",
+          "params": {
+            "message": {
+              "messageId": "msg-456",
+              "parts": [{"text": "Create an image of a Bengal cat with emerald eyes"}],
+              "role": "user"
+            }
+          }
+        }'
+→ The image is generated, scored, and uploaded to your GCS bucket.
+
+## 🧾 Sample Results
+Generated Images:
+
+      gs://soumya-unique-bucket/2025-10-28/af146911-a976-4efa-8063-3ed303e14b99/generated_image_0.png
 
 
-## 📁 Repository Structure
-      .
-      ├─ A1_From_Prototypes_to_Agents_with_ADK/
-      │  ├─ README.md
-      │  └─ (code, screenshots, video link)
-      ├─ A2_Building_AI_Agents_with_ADK_Tools/
-      │  ├─ README.md
-      │  └─ (code, screenshots, video link)
-      ├─ A3_Travel_Agent_MCP_Toolbox_ADK/
-      │  ├─ README.md
-      │  └─ (code, screenshots, video link)
-      └─ B_Education_Path_Advisor/
-         ├─ README.md
-         └─ (code, screenshots, video link)
+
+## 🧰 Tech Stack
+
+* Google ADK v1.8.0
+* Vertex AI Agent Engine
+* Google Cloud Storage
+* Python 3.12 / Poetry
+* A2A Protocol 0.2.6
+* gcloud / gsutil CLI
+
+## 🧹 Repository Structure
+
+
+multiagenthandson/
+
+│
+
+├── image_scoring/                   # Root + sub-agents
+
+│   ├── agent.py
+
+│   ├── deploy.py
+
+│   └── sub_agents/
+
+│
+
+├── image_scoring_adk_a2a_server/    # A2A server implementation
+
+│
+
+├── testclient/                      # Remote test scripts
+
+│
+
+├── dist/                            # Build artifacts (.whl, .tar.gz)
+
+├── screenshots/                     # PNG/JPG screenshots for README
+
+├── artifacts/                       # Synced GCS outputs (optional)
+
+└── README.md
