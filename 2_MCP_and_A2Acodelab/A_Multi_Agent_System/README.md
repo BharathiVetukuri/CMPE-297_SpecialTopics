@@ -30,14 +30,8 @@ Generated Image in GCS
 
 ## 🧩 Architecture
 
-```mermaid
-graph TD
-A[ADK Root Agent] --> B[Image Generation Agent]
-A --> C[Image Scoring Agent]
-C --> D[Checker Agent]
-D --> E[Vertex AI Agent Engine]
-E --> F[GCS Bucket (for images & artifacts)]
-A2A[A2A API Server] --> A
+<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/580b07a8-abe8-49ef-b9f5-1fde7ee3d8c5" />
+
 
 ## Components
 
