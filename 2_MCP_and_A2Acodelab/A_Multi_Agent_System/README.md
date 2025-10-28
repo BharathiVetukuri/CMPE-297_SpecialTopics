@@ -20,14 +20,39 @@ This project was completed as part of the **MCP and A2A Codelabs Assignment**.
 ---
 
 ## 📸 Screenshots
-Stage	Screenshot
 
 **ADK Web UI**
 
 <img width="800" height="500" alt="Screenshot 2025-10-27 at 4 40 48 PM" src="https://github.com/user-attachments/assets/9b0943e8-52b2-48d4-8d14-8e1b5f375174" />
 
-Vertex AI Deployment	
-A2A Agent Test	
+
+<img width="768" height="500" alt="catbytropicalbeach" src="https://github.com/user-attachments/assets/f47e1703-c8b9-4421-baf8-24527e98b4d2" />
+
+
+<img width="768" height="500" alt="peacefulmountainlandscapeatsunset" src="https://github.com/user-attachments/assets/4a84820e-78cd-4125-9f4d-1a033b3c8f33" />
+
+---
+**Image Scoring**
+
+<img width="800" height="500" alt="Screenshot 2025-10-27 at 9 14 26 PM" src="https://github.com/user-attachments/assets/ffea8470-f3a2-4558-a7bd-bdbbe028f759" />
+
+---
+**Agent (Vertex AI) Build Logs**
+
+<img width="800" height="500" alt="Screenshot 2025-10-27 at 8 49 05 PM" src="https://github.com/user-attachments/assets/7e4e2cdb-dcfc-4437-90df-9fae32fbb868" />
+
+---
+**Vertex AI Deployment**
+
+<img width="800" height="500" alt="Screenshot 2025-10-27 at 5 20 24 PM" src="https://github.com/user-attachments/assets/36f88b76-87f7-4bdf-9a58-320ed9ba9d86" />
+
+
+---
+**A2A Agent Test**	
+
+<img width="800" height="500" alt="Screenshot 2025-10-27 at 8 48 38 PM" src="https://github.com/user-attachments/assets/d612342c-2fde-471f-9abf-58c561f38d23" />
+
+<img width="800" height="500" alt="Screenshot 2025-10-27 at 8 57 09 PM" src="https://github.com/user-attachments/assets/834ee073-6a03-4b4f-ae87-02014b8dc93e" />
 
 
 ---
