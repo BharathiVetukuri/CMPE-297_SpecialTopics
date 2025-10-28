@@ -15,16 +15,20 @@ This project was completed as part of the **MCP and A2A Codelabs Assignment**.
 ---
 
 ## 🎥 Demo Video
-🎬 Watch the full walkthrough here:
+🎬 Watch the full walkthrough here: https://youtu.be/DxUCDeCzgjk 
 
 ---
 
 ## 📸 Screenshots
 Stage	Screenshot
-ADK Web UI	
+
+**ADK Web UI**
+
+<img width="800" height="500" alt="Screenshot 2025-10-27 at 4 40 48 PM" src="https://github.com/user-attachments/assets/9b0943e8-52b2-48d4-8d14-8e1b5f375174" />
+
 Vertex AI Deployment	
 A2A Agent Test	
-Generated Image in GCS	
+
 
 ---
 
