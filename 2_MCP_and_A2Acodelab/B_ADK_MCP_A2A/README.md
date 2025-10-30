@@ -132,3 +132,36 @@ Understanding agent-to-agent communication flow.
 
 ## Screenshots
 
+### 1. Start MCP Server
+
+<img width="940" height="861" alt="Screenshot 2025-10-27 at 11 30 11 PM" src="https://github.com/user-attachments/assets/4c511962-133a-4401-9f01-fd73209772ab" />
+
+
+### 2. Local MCP Server
+
+<img width="940" height="66" alt="Screenshot 2025-10-27 at 11 59 22 PM" src="https://github.com/user-attachments/assets/87863868-a736-4f02-abaa-2f504476c2b4" />
+
+### 3. Test Remote MCP Server
+
+<img width="940" height="130" alt="Screenshot 2025-10-28 at 12 00 01 AM" src="https://github.com/user-attachments/assets/cba731b7-a8b2-4347-a740-8357dbca460c" />
+
+### 4. Deploy MCP Server
+
+<img width="940" height="190" alt="Screenshot 2025-10-27 at 11 46 00 PM" src="https://github.com/user-attachments/assets/4c9a3b1f-bdb7-4a49-ac2c-dad0943359e4" />
+
+### 5. Authenticating MCP Clients
+
+<img width="940" height="224" alt="Screenshot 2025-10-27 at 11 47 28 PM" src="https://github.com/user-attachments/assets/0d4c22f8-6f8a-4b9f-8293-58615fae9b26" />
+
+
+### 6. Currency Agent
+
+<img width="940" height="317" alt="Screenshot 2025-10-28 at 12 03 47 AM" src="https://github.com/user-attachments/assets/c7f46791-799b-4d03-be0f-2eab4a6e4b0d" />
+
+### 7. Test the A2A Server
+
+<img width="940" height="652" alt="Screenshot 2025-10-28 at 12 57 06 AM" src="https://github.com/user-attachments/assets/c5d85dd5-49ba-4442-93b4-7b5c41cb9a58" />
+
+
+
+
