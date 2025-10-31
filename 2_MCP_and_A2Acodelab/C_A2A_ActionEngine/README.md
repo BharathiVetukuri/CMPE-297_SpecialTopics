@@ -1,3 +1,44 @@
+# 🛒 Purchasing Concierge A2A — Google Agent-to-Agent Action Engine Codelab 3
+
+## 📘 Overview
+This project implements **Codelab 3: Getting Started with A2A Action Engine**, part of the **MCP and A2A Codelabs Assignment**.  
+It demonstrates building and deploying a **Purchasing Concierge Agent** that interacts with seller agents through the **A2A (Agent-to-Agent)** protocol using **Google ADK** and **A2A SDK**.
+
+The app features a simple **Gradio UI** for users to interact with the purchasing agent and test multi-agent communication.
+
+---
+# 🎥 Demo Video
+
+📺 YouTube Walkthrough:
+---
+
+## 🧠 Key Concepts Demonstrated
+- Multi-agent system using **Google ADK + A2A SDK**
+- Python environment management using **uv**
+- **Gradio** front-end interface for interaction
+- Agent communication via **A2A Action Engine**
+- Deployment to **Google Cloud Run** (serverless container)
+- Clean DevOps workflow with **Dockerfile** + **deploy script**
+
+---
+
+## 🧩 Directory Structure
+
+    purchasing-concierge-a2a/
+    │
+    ├── purchasing_concierge_ui.py # Main Gradio app
+    ├── purchasing_concierge/ # Agent implementation
+    ├── remote_seller_agents/ # Seller agent simulation
+    │
+    ├── pyproject.toml # Dependencies (uv / poetry style)
+    ├── uv.lock # Dependency lock file
+    ├── Dockerfile # For Cloud Run container build
+    ├── deploy_to_cloud_run.sh # Deployment script
+    │
+    ├── README.md # Project documentation
+    └── README-DEPLOY.md # Technical deployment guide
+
+
 # Screenshots
 
 **1. Workshop Development Setup**
