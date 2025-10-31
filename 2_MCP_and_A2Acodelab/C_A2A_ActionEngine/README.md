@@ -12,7 +12,7 @@ a. Service Deployment:
 
 b. burger agent card information:
 
-<img width="900" height="400" alt="image" src="https://github.com/user-attachments/assets/1f2fc658-98bb-4d5f-bba3-537c0dc9ebce" />
+<img width="400" height="400" alt="image" src="https://github.com/user-attachments/assets/1f2fc658-98bb-4d5f-bba3-537c0dc9ebce" />
 
 
 **3. Deploying Pizza Seller Agent**
