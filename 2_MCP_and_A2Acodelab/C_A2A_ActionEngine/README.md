@@ -26,3 +26,16 @@ d. Updated Card Information:
 
 **3. Deploying Pizza Seller Agent**
 
+a. Service Deployment:
+
+<img width="2108" height="724" alt="image" src="https://github.com/user-attachments/assets/0dc41927-aeb1-4a27-af68-887bdf5b8f97" />
+
+
+b. Pizza agent card information:
+
+<img width="1342" height="1138" alt="image" src="https://github.com/user-attachments/assets/253cb750-2d96-4adc-bcf7-18e79800b30c" />
+
+c. Updated Card Information After HOST_OVERRIDE:
+
+<img width="1304" height="1098" alt="image" src="https://github.com/user-attachments/assets/94b3446d-d009-4722-b07e-85bd08884a92" /> 
+
