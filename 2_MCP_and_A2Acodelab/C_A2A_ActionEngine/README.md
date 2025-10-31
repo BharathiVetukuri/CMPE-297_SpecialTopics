@@ -1,4 +1,4 @@
-# 🛒 Purchasing Concierge A2A — Google Agent-to-Agent Action Engine Codelab 3
+# 🛒 Purchasing Concierge A2A — Google Agent-to-Agent Action Engine
 
 ## 📘 Overview
 This project implements **Codelab 3: Getting Started with A2A Action Engine**, part of the **MCP and A2A Codelabs Assignment**.  
