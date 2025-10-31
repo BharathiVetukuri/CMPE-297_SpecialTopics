@@ -7,7 +7,7 @@ It demonstrates building and deploying a **Purchasing Concierge Agent** that int
 The app features a simple **Gradio UI** for users to interact with the purchasing agent and test multi-agent communication.
 
 ---
-# 🎥 Demo Video: 
+# 🎥 Demo Video: https://youtu.be/0EwIbT8CWpI 
 ---
 
 ## 🧠 Key Concepts Demonstrated
