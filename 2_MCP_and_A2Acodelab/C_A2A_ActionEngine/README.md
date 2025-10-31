@@ -39,3 +39,13 @@ c. Updated Card Information After HOST_OVERRIDE:
 
 <img width="1304" height="1098" alt="image" src="https://github.com/user-attachments/assets/94b3446d-d009-4722-b07e-85bd08884a92" /> 
 
+**4. Deploying the Purchasing Concierge - A2A Client to Agent Engine**
+
+<img width="2836" height="1682" alt="image" src="https://github.com/user-attachments/assets/34037904-7897-4358-b16a-94e4e83996cb" />
+
+Testing the Deployed Agent on Agent Engine:
+
+<img width="2836" height="896" alt="image" src="https://github.com/user-attachments/assets/7f9b3b0e-7986-4940-a19b-93d19af2bb37" />
+
+
+
