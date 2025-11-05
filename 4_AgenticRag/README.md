@@ -25,6 +25,11 @@
 
 <img width="900" height="700" alt="image" src="https://github.com/user-attachments/assets/271b6349-1572-4c5d-b72f-50d7763a327f" />
 
+**Frontend Service Using Gradio**
+
+<img width="900" height="200" alt="image" src="https://github.com/user-attachments/assets/de911203-e42f-44be-ad62-1a2c9016c591" />
+
+
 
 
 
