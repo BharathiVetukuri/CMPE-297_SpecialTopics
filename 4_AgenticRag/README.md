@@ -67,8 +67,9 @@ Frontend → Backend (API) → ADK Agent → Vertex AI Model → Database.
     ├── README.md # This file
     └── .env / .venv # Environment setup
 
+---
 
-<img width="300" height="200" alt="image" src="https://github.com/user-attachments/assets/e76b9e59-4cb4-47b7-8e4e-5ad0acdbadf9" />
+<img width="400" height="300" alt="image" src="https://github.com/user-attachments/assets/e76b9e59-4cb4-47b7-8e4e-5ad0acdbadf9" />
 
 
 
