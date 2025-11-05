@@ -43,6 +43,12 @@ Frontend → Backend (API) → ADK Agent → Vertex AI Model → Database.
 
 ---
 
+**Conversations with the Agent - backend.py**
+
+<img width="900" height="700" alt="image" src="https://github.com/user-attachments/assets/156ffe92-406e-4c7d-91a5-8129b7664f55" />
+
+---
+
 ## 🏗️ Project Structure
 
     personal-expense-assistant/
