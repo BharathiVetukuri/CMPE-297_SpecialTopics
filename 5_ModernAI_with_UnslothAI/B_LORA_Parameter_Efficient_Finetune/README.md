@@ -10,7 +10,7 @@ While Part (a) performed **full fine-tuning**, Part (b) fine-tunes only a small 
 
 ## ✅ Artifacts
 
-**📘 Colab Notebook:**
+**📘 Colab Notebook:** https://colab.research.google.com/drive/1kAgTri6ZTBC5bVdG6CluZlLtK8nubu5m?usp=sharing 
 
 **📹 Demo Video:**
 
