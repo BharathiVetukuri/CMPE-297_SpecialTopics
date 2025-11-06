@@ -2,11 +2,11 @@
 
 This repo contains two Google Colab notebooks demonstrating modern LLM training with Unsloth.ai:
 
-* Full Fine-Tuning (SmolLM2-135M): 
+* Full Fine-Tuning (SmolLM2-135M): https://colab.research.google.com/drive/1AiMSV4dBmdWxxEjV6jNuQZxp8rVYHqu2?usp=sharing 
 
-* LoRA + 4-bit Quantization (Gemma-3-1B-IT) + Chat UI: 
+* LoRA + 4-bit Quantization (Gemma-3-1B-IT) + Chat UI: https://colab.research.google.com/drive/1QidP3XRQBbcDwwWypWt0VugEDIomSw7h?usp=sharing 
 
-### 📹 YouTube Video
+### 📹 Demo Video
 
 * Colab 1 Video: https://youtu.be/your-video-link-1
 
