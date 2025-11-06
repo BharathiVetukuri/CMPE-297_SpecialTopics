@@ -8,20 +8,20 @@ While Part (a) performed **full fine-tuning**, Part (b) fine-tunes only a small 
 
 ---
 
+## ✅ Artifacts
+
+**📘 Colab Notebook:**
+
+**📹 Demo Video:**
+
+---
+
 ## 🎯 Objectives
 - Fine-tune `unsloth/smollm2-135m` using **LoRA (Low-Rank Adaptation)**  
 - Use the same dataset as in full fine-tuning (Alpaca-style instruction data)  
 - Explain and demonstrate **parameter-efficient training**  
 - Run **chat** and **coding** tasks with multiple **chat-template formats**  
 - Record a **YouTube walkthrough** showing inputs, code, and results  
-
----
-
-## ✅ Deliverables
-
-#### 📘 Colab Notebook:
-
-#### 📹 Demo Video:
 
 ---
 
