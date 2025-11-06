@@ -21,7 +21,7 @@ While Part (a) performed **full fine-tuning**, Part (b) fine-tunes only a small 
 
 #### 📘 Colab Notebook:
 
-#### YouTube video:
+#### 📹 Demo Video:
 
 ---
 
