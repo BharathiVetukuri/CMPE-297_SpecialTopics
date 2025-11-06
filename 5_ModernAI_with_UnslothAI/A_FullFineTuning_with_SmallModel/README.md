@@ -1,4 +1,4 @@
-# Modern AI with Unsloth.ai — Fine-Tuning & Inference (Colab)
+# Modern AI with Unsloth.ai — Fine-Tuning & Inference
 
 This repo contains two Google Colab notebooks demonstrating modern LLM training with Unsloth.ai:
 
