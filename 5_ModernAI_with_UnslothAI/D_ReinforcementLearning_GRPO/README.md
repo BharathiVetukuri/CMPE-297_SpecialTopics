@@ -1,4 +1,4 @@
-# 🤖 Reinforcement Learning with GRPO — Colab 4
+# 🤖 Reinforcement Learning with GRPO
 
 ## 📘 Overview
 This Colab demonstrates **Reinforcement Learning (RL)** using the **GRPO (Generalized Reward Policy Optimization)** framework with **Unsloth.ai**.  
