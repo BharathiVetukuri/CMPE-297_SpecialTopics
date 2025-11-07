@@ -8,6 +8,15 @@ The model learns from **self-generated reasoning traces** through **reward feedb
 
 ---
 
+
+## ✅ Artifacts
+
+**📘 Colab Notebook:** https://colab.research.google.com/drive/1RT7IpugQXyX7c0fg92y2qjwtFRv9TM6c?usp=sharing 
+
+**📹 Demo Video:**
+
+---
+
 ## 🎯 Objective
 - Implement **reasoning-based reinforcement learning** using GRPO.  
 - Train an open-weight model such as **Qwen3 (4B)** or any Unsloth-compatible LLM.  
@@ -65,3 +74,12 @@ The model learns from **self-generated reasoning traces** through **reward feedb
 | **Reward signal** | Increases steadily as model learns reasoning style |
 | **Output quality** | Answers become logically coherent and self-consistent |
 | **Efficiency** | GRPO converges faster than full PPO implementations |
+
+---
+
+## Screenshots
+
+<img width="860" height="536" alt="image" src="https://github.com/user-attachments/assets/d171153b-f7a2-4ded-a7c7-3a18ff417988" />
+
+<img width="860" height="536" alt="image" src="https://github.com/user-attachments/assets/220a4e62-c8d3-4c94-8aa5-5dc3f2189aec" />
+
