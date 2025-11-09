@@ -11,6 +11,14 @@ This corresponds to **Part (c)** of the assignment.
 
 ---
 
+## ✅ Artifacts
+
+**📘 Colab Notebook:** https://colab.research.google.com/drive/1OfaJJQDDwsLRmSsBuYzZR6baMMbUuvZx?usp=sharing 
+
+**📹 Demo Video:**
+
+---
+
 ## 🎯 Objective
 - Implement **Reinforcement Learning** using Unsloth.ai on a dataset with `prompt`, `chosen`, and `rejected` fields.
 - Fine-tune a small open-weights model (e.g., `unsloth/smollm2-135m`) for preference alignment.
