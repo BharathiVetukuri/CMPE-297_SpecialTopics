@@ -3,6 +3,13 @@
 This README summarizes the **visible result cells** for your Continued Pretraining (Colab 5) notebook.  
 
 ---
+# Artifacts
+
+**📘 Colab Notebook:** https://colab.research.google.com/drive/1jOhaRfygFFaJ0ZCPWwAiMFGk3FwS_1d4?usp=sharing 
+
+**📹 Demo Video:**
+
+---
 
 ## ✅ What This Section Shows
 - A quick **peek at training samples** (what the model learned from).
@@ -56,3 +63,15 @@ This README summarizes the **visible result cells** for your Continued Pretraini
 ## 🔗 References
 - Unsloth.ai — **Continued Pretraining** (basics)
 - Unsloth.ai — **Export to Ollama** tutorial
+
+---
+
+## Screenshots
+
+<img width="860" height="530" alt="image" src="https://github.com/user-attachments/assets/40507780-1bdf-4a61-add7-66d6d1877577" />
+
+<img width="860" height="538" alt="image" src="https://github.com/user-attachments/assets/f47cec48-3a7e-47fe-b417-28131e632439" />
+
+
+<img width="860" height="538" alt="image" src="https://github.com/user-attachments/assets/26eec5b6-8e69-458b-85fc-dc4b0502e6b4" />
+
