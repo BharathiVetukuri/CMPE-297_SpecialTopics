@@ -20,7 +20,7 @@ This README summarizes the **visible result cells** for your Continued Pretraini
 ---
 
 ## ▶️ How To Use
-1. Run your training steps (through saving the continued-pretrained model).
+1. Run training steps (through saving the continued-pretrained model).
 2. Add the four visibility cells **after training**.
 3. Execute them in order to print comparison outputs in the notebook.
 
@@ -36,11 +36,11 @@ This README summarizes the **visible result cells** for your Continued Pretraini
 **Cell:** *Compare BASE vs CONTINUED model outputs on French prompts*  
 **Purpose:** Demonstrates clearer, more natural French or better adherence to prompts after continued pretraining.
 
-### 3) Empathetic Assistant Demo (Optional)
+### 3) Empathetic Assistant Demo
 **Cell:** *Short empathetic response in French (or your target domain/language)*  
 **Purpose:** Showcases tone/style gains (e.g., counseling or supportive phrasing).
 
-### 4) Tiny Fluency Proxy (Optional)
+### 4) Tiny Fluency Proxy
 **Cell:** *Length & accented-character count*  
 **Purpose:** A quick, non-scientific proxy indicating more fluent, longer, or accent-rich responses after training.
 
