@@ -66,13 +66,15 @@ The assistant leverages multiple tool integrations:
 
 #### 3️⃣ Stack Overflow Integration
 
+<img width="1432" height="840" alt="Screenshot 2025-11-11 at 2 58 38 PM" src="https://github.com/user-attachments/assets/1bf34968-402d-42ca-bad1-1dc5625a88e7" />
+
 #### 4️⃣ GitHub MCP Tool in Action
 
 <img width="1432" height="840" alt="Screenshot 2025-11-11 at 3 14 45 PM" src="https://github.com/user-attachments/assets/d412db23-90e3-4b98-ac17-c53f38d188e0" />
 
 <img width="1432" height="840" alt="Screenshot 2025-11-11 at 3 01 51 PM" src="https://github.com/user-attachments/assets/8cb44595-8a0e-4b25-88f6-9f2f7daf831c" />
 
-<img width="1432" height="840" alt="Screenshot 2025-11-11 at 2 58 38 PM" src="https://github.com/user-attachments/assets/1bf34968-402d-42ca-bad1-1dc5625a88e7" />
+
 
 ---
 
