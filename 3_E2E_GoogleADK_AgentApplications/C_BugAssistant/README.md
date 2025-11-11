@@ -1,170 +1,97 @@
-# 🧠 Multi-Agent Image Scoring System using Google ADK, MCP & A2A
+# 🧠 Software Bug Assistant — Google ADK + MCP Tools
 
-## 🎯 Overview
-
-This project implements a **multi-agent system** using the **Google Agent Development Kit (ADK)** and **Action-to-Action (A2A)** protocol.  
-It demonstrates how to design, deploy, and interact with agents that can:
-
-- Generate high-quality images based on natural-language prompts  
-- Score the generated images against defined content and design guidelines  
-- Deploy seamlessly to **Vertex AI Agent Engine** for scalable inference  
-- Interoperate via the **A2A API layer**
-
-This project was completed as part of the **MCP and A2A Codelabs Assignment**.
+> **A Multi-Tool AI Agent built in Google Cloud using the Agent Development Kit (ADK) and Model Context Protocol (MCP)**  
+> _Helps developers search, debug, and triage software issues automatically using real-time web, Stack Overflow, and GitHub context._
 
 ---
 
 ## 🎥 Demo Video
-🎬 Watch the full walkthrough here: https://youtu.be/DxUCDeCzgjk 
+
+**🎬 👉 : https://youtu.be/6X2zhDFyU4I**
 
 ---
 
-## 📸 Screenshots
+## 🧩 Project Overview
 
-**ADK Web UI**
+This project implements a **Software Bug Assistant** that uses **Google’s ADK (Agent Development Kit)** and **MCP tools** to assist developers with debugging and information retrieval.  
 
-<img width="700" height="500" alt="Screenshot 2025-10-27 at 4 40 48 PM" src="https://github.com/user-attachments/assets/9b0943e8-52b2-48d4-8d14-8e1b5f375174" />
+The assistant leverages multiple tool integrations:
 
-
-<img width="350" height="500" alt="catbytropicalbeach" src="https://github.com/user-attachments/assets/f47e1703-c8b9-4421-baf8-24527e98b4d2" />
-
-
-<img width="350" height="500" alt="peacefulmountainlandscapeatsunset" src="https://github.com/user-attachments/assets/4a84820e-78cd-4125-9f4d-1a033b3c8f33" />
-
----
-**Image Scoring**
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 9 14 26 PM" src="https://github.com/user-attachments/assets/ffea8470-f3a2-4558-a7bd-bdbbe028f759" />
-
----
-**Agent (Vertex AI) Build Logs**
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 8 49 05 PM" src="https://github.com/user-attachments/assets/7e4e2cdb-dcfc-4437-90df-9fae32fbb868" />
-
----
-**Vertex AI Deployment**
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 5 20 24 PM" src="https://github.com/user-attachments/assets/36f88b76-87f7-4bdf-9a58-320ed9ba9d86" />
-
-
----
-**A2A Agent Test**	
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 8 48 38 PM" src="https://github.com/user-attachments/assets/d612342c-2fde-471f-9abf-58c561f38d23" />
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 8 57 09 PM" src="https://github.com/user-attachments/assets/834ee073-6a03-4b4f-ae87-02014b8dc93e" />
-
+| Tool Type | Integration | Description |
+|------------|--------------|--------------|
+| **Built-in Tool** | `google_search` | Queries real-time CVE and vulnerability info via Google Search |
+| **Third-Party Tool** | `StackExchangeTool` (LangChain) | Retrieves relevant developer Q&A discussions from Stack Overflow |
+| **MCP Tool** | `MCPToolset` (GitHub API) | Searches GitHub repositories, issues, and pull requests dynamically |
+| **Optional Tool** | `Toolbox MCP` | Handles internal ticket creation and retrieval from a database |
 
 ---
 
-## 🧩 Architecture
+## 🧠 Architecture Diagram
 
-<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/580b07a8-abe8-49ef-b9f5-1fde7ee3d8c5" />
+        ┌──────────────────────────────────────────────────────┐
+        │                   ADK Web Interface                   │
+        │    (Chat-based Software Bug Assistant running in GCP) │
+        └───────────────┬───────────────────────────────────────┘
+                        │
+                        ▼
+   ┌─────────────────────────────────────────────────────────────┐
+   │                      ADK Agent Layer                        │
+   │  - Model: Gemini 2.5 Flash                                  │
+   │  - Agent Tools:                                             │
+   │      1️⃣ GoogleSearchTool                                    │
+   │      2️⃣ LangChain StackExchangeTool                         │
+   │      3️⃣ MCP GitHub Toolset                                  │
+   │                                                             │
+   └─────────────────────────────────────────────────────────────┘
+                        │
+                        ▼
+      ┌───────────────────────────────────────────┐
+      │          External Knowledge Sources        │
+      │  🌐 Google Search   💬 Stack Overflow       │
+      │  🧑‍💻 GitHub MCP     🗄️ Local/Cloud SQL DB   │
+      └───────────────────────────────────────────┘
 
+## 🖼️ Screenshots
 
-## Components
+#### 1️⃣ Base Agent Greeting
 
-* image_scoring/	--- Contains the ADK-based root and sub-agents (generation + scoring).
-* image_scoring_adk_a2a_server/ ---	Runs the A2A API server for agent-to-agent communication.
-* testclient/	--- Local test scripts to trigger remote reasoning-engine calls.
-* dist/	--- Wheel and build artifacts generated for deployment.
-* Vertex AI Agent Engine	--- Managed runtime used to deploy and test the agent remotely.
-* GCS Bucket	--- Stores generated images and deployment packages.
-
-## 🚀 Execution Summary
-
-**1️⃣ Local ADK Testing**
-
-      adk web
-
-→ Open the ADK web UI → test prompts like "Generate an image of a cat riding a bicycle"
-
-**2️⃣ Deploy to Vertex AI Agent Engine**
-
-      python3 -m image_scoring.deploy
-
-→ Creates an Agent Engine on Vertex AI (us-central1)
-→ Prints your reasoningEngine ID.
-
-**3️⃣ Remote Test via Test Client**
-
-      cd testclient
-      python3 remote_test.py
-
-→ Confirms the deployed agent generates and scores images remotely.
-
-**4️⃣ Run A2A API Server**
-
-      cd image_scoring_adk_a2a_server
-      export GOOGLE_CLOUD_PROJECT=assignment2-476319
-      export GOOGLE_CLOUD_LOCATION=us-central1
-      export GCS_BUCKET_NAME=soumya-unique-bucket
-      adk api_server --a2a --port 8001 remote_a2a
-
-**5️⃣ Test A2A Agent**
-
-      curl http://localhost:8001/a2a/image_scoring/.well-known/agent.json
-      
-      curl -X POST http://localhost:8001/a2a/image_scoring \
-        -H 'Content-Type: application/json' \
-        -d '{
-          "id": "uuid-123",
-          "params": {
-            "message": {
-              "messageId": "msg-456",
-              "parts": [{"text": "Create an image of a Bengal cat with emerald eyes"}],
-              "role": "user"
-            }
-          }
-        }'
-→ The image is generated, scored, and uploaded to your GCS bucket.
-
-## 🧾 Sample Results
-Generated Images:
-
-      gs://soumya-unique-bucket/2025-10-28/af146911-a976-4efa-8063-3ed303e14b99/generated_image_0.png
-
-<img width="468" height="700" alt="image" src="https://github.com/user-attachments/assets/20548f9a-5bc8-4af9-a260-1b65bcc5407a" />
+<img width="1432" height="675" alt="Screenshot 2025-11-11 at 2 48 30 PM" src="https://github.com/user-attachments/assets/ab2dda74-5524-4dda-85c7-f9bcb0e30dec" />
 
 
-## 🧰 Tech Stack
+#### 2️⃣ Built-in Google Search — CVE Example
 
-* Google ADK v1.8.0
-* Vertex AI Agent Engine
-* Google Cloud Storage
-* Python 3.12 / Poetry
-* A2A Protocol 0.2.6
-* gcloud / gsutil CLI
-
-## 🧹 Repository Structure
+<img width="1432" height="797" alt="Screenshot 2025-11-11 at 2 56 30 PM" src="https://github.com/user-attachments/assets/a8713f69-319d-4b25-8d71-cc90d7b3e790" />
 
 
-multiagenthandson/
+#### 3️⃣ Stack Overflow Integration
 
-│
+#### 4️⃣ GitHub MCP Tool in Action
 
-├── image_scoring/                   # Root + sub-agents
+<img width="1432" height="840" alt="Screenshot 2025-11-11 at 3 14 45 PM" src="https://github.com/user-attachments/assets/d412db23-90e3-4b98-ac17-c53f38d188e0" />
 
-│   ├── agent.py
+<img width="1432" height="840" alt="Screenshot 2025-11-11 at 3 01 51 PM" src="https://github.com/user-attachments/assets/8cb44595-8a0e-4b25-88f6-9f2f7daf831c" />
 
-│   ├── deploy.py
+<img width="1432" height="840" alt="Screenshot 2025-11-11 at 2 58 38 PM" src="https://github.com/user-attachments/assets/1bf34968-402d-42ca-bad1-1dc5625a88e7" />
 
-│   └── sub_agents/
+---
 
-│
+## 🔍 Demonstrated Features
 
-├── image_scoring_adk_a2a_server/    # A2A server implementation
+* ✅ Base Agent Initialization using Gemini 2.5 Flash
+* ✅ Built-in Tool (Google Search) for CVE lookups
+* ✅ Third-Party Integration (LangChain StackOverflow)
+* ✅ MCP Tool (GitHub) for issue search
+* ✅ Automatic tool chaining & reasoning
+* ✅ Event-level trace and function call inspection via ADK Web UI
 
-│
+---
 
-├── testclient/                      # Remote test scripts
+## 💡 Key Learnings
 
-│
+* ADK simplifies multi-tool agent creation — you can attach built-in, third-party, and MCP tools declaratively.
 
-├── dist/                            # Build artifacts (.whl, .tar.gz)
+* MCP brings structured context from sources like GitHub and internal databases.
 
-├── screenshots/                     # PNG/JPG screenshots for README
+* Google Cloud Shell + ADK Web provide a fully managed environment for live development and debugging.
 
-├── artifacts/                       # Synced GCS outputs (optional)
-
-└── README.md
+* Gemini 2.5 Flash powers reasoning, summarization, and tool orchestration seamlessly.
