@@ -15,7 +15,7 @@ This corresponds to **Part (c)** of the assignment.
 
 **📘 Colab Notebook:** https://colab.research.google.com/drive/1OfaJJQDDwsLRmSsBuYzZR6baMMbUuvZx?usp=sharing 
 
-**📹 Demo Video:**
+**📹 Demo Video:** https://youtu.be/tJn3v6Yd9-E 
 
 ---
 
