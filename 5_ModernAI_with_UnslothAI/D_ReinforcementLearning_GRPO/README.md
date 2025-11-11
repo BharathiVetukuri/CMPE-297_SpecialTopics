@@ -13,7 +13,7 @@ The model learns from **self-generated reasoning traces** through **reward feedb
 
 **📘 Colab Notebook:** https://colab.research.google.com/drive/1RT7IpugQXyX7c0fg92y2qjwtFRv9TM6c?usp=sharing 
 
-**📹 Demo Video:**
+**📹 Demo Video:** https://youtu.be/u_iilU8ujy4 
 
 ---
 
