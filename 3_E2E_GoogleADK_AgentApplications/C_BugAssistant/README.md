@@ -1,7 +1,8 @@
 # 🧠 Software Bug Assistant — Google ADK + MCP Tools
 
-> **A Multi-Tool AI Agent built in Google Cloud using the Agent Development Kit (ADK) and Model Context Protocol (MCP)**  
-> _Helps developers search, debug, and triage software issues automatically using real-time web, Stack Overflow, and GitHub context._
+**A Multi-Tool AI Agent built in Google Cloud using the Agent Development Kit (ADK) and Model Context Protocol (MCP)**  
+
+Helps developers search, debug, and triage software issues automatically using real-time web, Stack Overflow, and GitHub context.
 
 ---
 
