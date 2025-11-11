@@ -7,7 +7,7 @@ This README summarizes the **visible result cells** for your Continued Pretraini
 
 **📘 Colab Notebook:** https://colab.research.google.com/drive/1jOhaRfygFFaJ0ZCPWwAiMFGk3FwS_1d4?usp=sharing 
 
-**📹 Demo Video:**
+**📹 Demo Video:** https://youtu.be/BRJACqX2yMw 
 
 ---
 
