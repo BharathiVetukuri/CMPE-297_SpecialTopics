@@ -1,170 +1,132 @@
-# 🧠 Multi-Agent Image Scoring System using Google ADK, MCP & A2A
+# 🤖 Deep Research Lead Generation Agent using Google ADK
 
-## 🎯 Overview
+## 📘 Overview
+This project implements an **end-to-end Deep Research Agent** for **lead generation**, built using **Google’s Agent Development Kit (ADK)**.  
+It follows the official [Google Cloud Blog Codelab](https://cloud.google.com/blog/products/ai-machine-learning/build-a-deep-research-agent-with-google-adk) and replicates the workflow of the open-source project [MagnIeeT/leadGenerationAgentADK](https://github.com/MagnIeeT/leadGenerationAgentADK).
 
-This project implements a **multi-agent system** using the **Google Agent Development Kit (ADK)** and **Action-to-Action (A2A)** protocol.  
-It demonstrates how to design, deploy, and interact with agents that can:
+The agent performs **pattern discovery** and **lead generation** by analyzing successful companies in a target industry and geography, then identifying similar potential leads.  
 
-- Generate high-quality images based on natural-language prompts  
-- Score the generated images against defined content and design guidelines  
-- Deploy seamlessly to **Vertex AI Agent Engine** for scalable inference  
-- Interoperate via the **A2A API layer**
-
-This project was completed as part of the **MCP and A2A Codelabs Assignment**.
-
----
-
-## 🎥 Demo Video
-🎬 Watch the full walkthrough here: https://youtu.be/DxUCDeCzgjk 
+This repository demonstrates:
+- Local agent execution via ADK CLI
+- Cloud deployment to **Vertex AI Reasoning Engine**
+- Cloud testing and interaction
+- Logging, configuration, and environment setup for reproducibility
 
 ---
 
-## 📸 Screenshots
-
-**ADK Web UI**
-
-<img width="700" height="500" alt="Screenshot 2025-10-27 at 4 40 48 PM" src="https://github.com/user-attachments/assets/9b0943e8-52b2-48d4-8d14-8e1b5f375174" />
-
-
-<img width="350" height="500" alt="catbytropicalbeach" src="https://github.com/user-attachments/assets/f47e1703-c8b9-4421-baf8-24527e98b4d2" />
-
-
-<img width="350" height="500" alt="peacefulmountainlandscapeatsunset" src="https://github.com/user-attachments/assets/4a84820e-78cd-4125-9f4d-1a033b3c8f33" />
-
----
-**Image Scoring**
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 9 14 26 PM" src="https://github.com/user-attachments/assets/ffea8470-f3a2-4558-a7bd-bdbbe028f759" />
-
----
-**Agent (Vertex AI) Build Logs**
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 8 49 05 PM" src="https://github.com/user-attachments/assets/7e4e2cdb-dcfc-4437-90df-9fae32fbb868" />
-
----
-**Vertex AI Deployment**
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 5 20 24 PM" src="https://github.com/user-attachments/assets/36f88b76-87f7-4bdf-9a58-320ed9ba9d86" />
-
-
----
-**A2A Agent Test**	
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 8 48 38 PM" src="https://github.com/user-attachments/assets/d612342c-2fde-471f-9abf-58c561f38d23" />
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 8 57 09 PM" src="https://github.com/user-attachments/assets/834ee073-6a03-4b4f-ae87-02014b8dc93e" />
-
+# 🎥 Video Walkthrough: https://youtu.be/Cx_VfDOlhqo 
 
 ---
 
-## 🧩 Architecture
+## 🧠 Project Architecture
 
-<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/580b07a8-abe8-49ef-b9f5-1fde7ee3d8c5" />
-
-
-## Components
-
-* image_scoring/	--- Contains the ADK-based root and sub-agents (generation + scoring).
-* image_scoring_adk_a2a_server/ ---	Runs the A2A API server for agent-to-agent communication.
-* testclient/	--- Local test scripts to trigger remote reasoning-engine calls.
-* dist/	--- Wheel and build artifacts generated for deployment.
-* Vertex AI Agent Engine	--- Managed runtime used to deploy and test the agent remotely.
-* GCS Bucket	--- Stores generated images and deployment packages.
-
-## 🚀 Execution Summary
-
-**1️⃣ Local ADK Testing**
-
-      adk web
-
-→ Open the ADK web UI → test prompts like "Generate an image of a cat riding a bicycle"
-
-**2️⃣ Deploy to Vertex AI Agent Engine**
-
-      python3 -m image_scoring.deploy
-
-→ Creates an Agent Engine on Vertex AI (us-central1)
-→ Prints your reasoningEngine ID.
-
-**3️⃣ Remote Test via Test Client**
-
-      cd testclient
-      python3 remote_test.py
-
-→ Confirms the deployed agent generates and scores images remotely.
-
-**4️⃣ Run A2A API Server**
-
-      cd image_scoring_adk_a2a_server
-      export GOOGLE_CLOUD_PROJECT=assignment2-476319
-      export GOOGLE_CLOUD_LOCATION=us-central1
-      export GCS_BUCKET_NAME=soumya-unique-bucket
-      adk api_server --a2a --port 8001 remote_a2a
-
-**5️⃣ Test A2A Agent**
-
-      curl http://localhost:8001/a2a/image_scoring/.well-known/agent.json
-      
-      curl -X POST http://localhost:8001/a2a/image_scoring \
-        -H 'Content-Type: application/json' \
-        -d '{
-          "id": "uuid-123",
-          "params": {
-            "message": {
-              "messageId": "msg-456",
-              "parts": [{"text": "Create an image of a Bengal cat with emerald eyes"}],
-              "role": "user"
-            }
-          }
-        }'
-→ The image is generated, scored, and uploaded to your GCS bucket.
-
-## 🧾 Sample Results
-Generated Images:
-
-      gs://soumya-unique-bucket/2025-10-28/af146911-a976-4efa-8063-3ed303e14b99/generated_image_0.png
-
-<img width="468" height="700" alt="image" src="https://github.com/user-attachments/assets/20548f9a-5bc8-4af9-a260-1b65bcc5407a" />
+<img width="704" height="568" alt="image" src="https://github.com/user-attachments/assets/29b9c4d6-07e2-4d7a-acea-35085c0d96cf" />
 
 
-## 🧰 Tech Stack
+The agent orchestrates research and reasoning sub-agents to extract insights and generate high-quality business leads.
 
-* Google ADK v1.8.0
-* Vertex AI Agent Engine
-* Google Cloud Storage
-* Python 3.12 / Poetry
-* A2A Protocol 0.2.6
-* gcloud / gsutil CLI
+---
 
-## 🧹 Repository Structure
+## ⚙️ Environment Setup
+
+### 1️⃣ Clone the repository
+
+            git clone https://github.com/<your-username>/LeadGenerationAgentADK.git
+            cd LeadGenerationAgentADK
+
+### 2️⃣ Install dependencies
+
+            pip install poetry
+            poetry install
+
+### 3️⃣ Configure environment
+
+            GOOGLE_CLOUD_PROJECT=st-assignment3
+            GOOGLE_CLOUD_LOCATION=us-central1
+            GOOGLE_GENAI_USE_VERTEXAI=True
+            GOOGLE_CLOUD_STORAGE_BUCKET=myassignment3bucket
+            GEN_FAST_MODEL=gemini-2.0-flash
+            GEN_ADVANCED_MODEL=gemini-2.5-pro
+            REASONING_ENGINE_ID="projects/170443623105/locations/us-central1/reasoningEngines/4193145922198175744"
+
+### 4️⃣ Authenticate to Google Cloud
+
+            gcloud auth application-default login
+            gcloud config set project st-assignment3
+            gcloud services enable aiplatform.googleapis.com
+
+### 🧩 Running Locally
+
+            poetry run adk run LeadGenerationResearch
+
+### Sample Interaction
+
+            [user]: Find fintech leads in Thailand
+            [InteractiveLeadGenerator]: It seems the Thai fintech market is dominated by local companies.
+            [user]: Find 5 leads for SaaS companies expanding into Brazil.
+            [InteractiveLeadGenerator]: The SaaS market in Brazil shows similar domestic dominance.
+
+### 🚀 Deploying to Vertex AI Reasoning Engine
+
+            poetry run python deployment/deploy.py --create
+
+### ☁️ Testing the Cloud-Hosted Agent
+
+            poetry run python deployment/test_deploy.py
+
+### Sample Session:
+
+            Running cloud agent InteractiveLeadGenerator
+            [user]: Find fintech leads in Thailand
+            [Agent]: The Thai fintech market is primarily domestic-driven.
+
+---
+
+# 📸 Screenshots
+
+### Agent Interaction
+
+<img width="864" height="450" alt="image" src="https://github.com/user-attachments/assets/912b20e2-8051-4ff9-ad5c-606e72152311" />
 
 
-multiagenthandson/
+### Successful Deployment
 
-│
+<img width="864" height="450" alt="image" src="https://github.com/user-attachments/assets/118c4555-6cee-4af5-99a3-1958b0b02797" />
 
-├── image_scoring/                   # Root + sub-agents
 
-│   ├── agent.py
+### Logs
 
-│   ├── deploy.py
+<img width="864" height="450" alt="image" src="https://github.com/user-attachments/assets/d82af0a8-f877-4eb5-b451-51d6ec003dda" />
 
-│   └── sub_agents/
+---
 
-│
+## 🗂️ Repository Structure
 
-├── image_scoring_adk_a2a_server/    # A2A server implementation
+            leadGenerationAgentADK/
+            │
+            ├── LeadGenerationResearch/        # Agent source code
+            ├── deployment/                    # Deployment & test scripts
+            ├── publish/                       # AgentSpace publishing utilities
+            ├── screenshots/                   # Demo screenshots
+            ├── .env, env_example              # Environment configuration
+            ├── README.md                      # Project documentation
+            ├── pyproject.toml, poetry.lock    # Dependency management
+---
 
-│
+# 🧠 Learnings & Reflections
 
-├── testclient/                      # Remote test scripts
+* Learned to use Google ADK for multi-agent orchestration
 
-│
+* Explored Reasoning Engine deployment on Vertex AI
 
-├── dist/                            # Build artifacts (.whl, .tar.gz)
+* Understood pattern discovery and lead generation pipelines
 
-├── screenshots/                     # PNG/JPG screenshots for README
+* Encountered and resolved deployment URI issues (e.g., gs://gs://bucket fix)
 
-├── artifacts/                       # Synced GCS outputs (optional)
+---
 
-└── README.md
+# 🏁 Conclusion
+
+- This project demonstrates how to design and deploy a deep research agent for lead generation using Google Cloud ADK and Vertex AI Reasoning Engines.
+
+- It integrates intelligent orchestration, pattern analysis, and scalable deployment — showcasing a modern agentic architecture for enterprise research workflows.
