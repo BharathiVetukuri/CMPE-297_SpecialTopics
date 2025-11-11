@@ -8,7 +8,7 @@ This repo contains two Google Colab notebooks demonstrating modern LLM training 
 
 ### 📹 Demo Video
 
-* Colab 1 Video: https://youtu.be/your-video-link-1
+* Colab 1 Video: https://youtu.be/cSRXxzvPaN0 
 
 * Colab 2 Video: https://youtu.be/your-video-link-2
 
