@@ -1,18 +1,6 @@
-# 🧠 Multi-Agent Image Scoring System using Google ADK, MCP & A2A
+# 🛍️ E-Commerce Agent with Google ADK and AlloyDB
 
-## 🎯 Overview
-
-This project implements a **multi-agent system** using the **Google Agent Development Kit (ADK)** and **Action-to-Action (A2A)** protocol.  
-It demonstrates how to design, deploy, and interact with agents that can:
-
-- Generate high-quality images based on natural-language prompts  
-- Score the generated images against defined content and design guidelines  
-- Deploy seamlessly to **Vertex AI Agent Engine** for scalable inference  
-- Interoperate via the **A2A API layer**
-
-This project was completed as part of the **MCP and A2A Codelabs Assignment**.
-
----
+This project implements a production-quality AI-powered E-Commerce Agent using Google’s Agent Developer Kit (ADK) and AlloyDB following the official Google Codelab
 
 ## 🎥 Demo Video
 🎬 Watch the full walkthrough here: https://youtu.be/DxUCDeCzgjk 
@@ -21,150 +9,135 @@ This project was completed as part of the **MCP and A2A Codelabs Assignment**.
 
 ## 📸 Screenshots
 
-**ADK Web UI**
-
-<img width="700" height="500" alt="Screenshot 2025-10-27 at 4 40 48 PM" src="https://github.com/user-attachments/assets/9b0943e8-52b2-48d4-8d14-8e1b5f375174" />
-
-
-<img width="350" height="500" alt="catbytropicalbeach" src="https://github.com/user-attachments/assets/f47e1703-c8b9-4421-baf8-24527e98b4d2" />
-
-
-<img width="350" height="500" alt="peacefulmountainlandscapeatsunset" src="https://github.com/user-attachments/assets/4a84820e-78cd-4125-9f4d-1a033b3c8f33" />
-
----
-**Image Scoring**
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 9 14 26 PM" src="https://github.com/user-attachments/assets/ffea8470-f3a2-4558-a7bd-bdbbe028f759" />
-
----
-**Agent (Vertex AI) Build Logs**
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 8 49 05 PM" src="https://github.com/user-attachments/assets/7e4e2cdb-dcfc-4437-90df-9fae32fbb868" />
-
----
-**Vertex AI Deployment**
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 5 20 24 PM" src="https://github.com/user-attachments/assets/36f88b76-87f7-4bdf-9a58-320ed9ba9d86" />
-
-
----
-**A2A Agent Test**	
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 8 48 38 PM" src="https://github.com/user-attachments/assets/d612342c-2fde-471f-9abf-58c561f38d23" />
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 8 57 09 PM" src="https://github.com/user-attachments/assets/834ee073-6a03-4b4f-ae87-02014b8dc93e" />
-
 
 ---
 
-## 🧩 Architecture
+## 📘 Overview
 
-<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/580b07a8-abe8-49ef-b9f5-1fde7ee3d8c5" />
+The E-Commerce Agent is a conversational AI system that integrates Google Vertex AI, AlloyDB, and ADK (Agent Developer Kit) to enable intelligent product discovery, recommendation, and customer interaction.
 
+It demonstrates:
 
-## Components
+* Secure backend integration with AlloyDB for relational + vector search
 
-* image_scoring/	--- Contains the ADK-based root and sub-agents (generation + scoring).
-* image_scoring_adk_a2a_server/ ---	Runs the A2A API server for agent-to-agent communication.
-* testclient/	--- Local test scripts to trigger remote reasoning-engine calls.
-* dist/	--- Wheel and build artifacts generated for deployment.
-* Vertex AI Agent Engine	--- Managed runtime used to deploy and test the agent remotely.
-* GCS Bucket	--- Stores generated images and deployment packages.
+* Vertex AI integration for model inference and embeddings
 
-## 🚀 Execution Summary
+* Role-based authorization and protection against prompt injection
 
-**1️⃣ Local ADK Testing**
+* Cloud-native deployment practices with production-ready setup
 
-      adk web
+---
+## 🔗 References
 
-→ Open the ADK web UI → test prompts like "Generate an image of a cat riding a bicycle"
+**Codelab Tutorial:**
 
-**2️⃣ Deploy to Vertex AI Agent Engine**
+Build Production Quality E-Commerce Agent with ADK
 
-      python3 -m image_scoring.deploy
+**Source Code:**
 
-→ Creates an Agent Engine on Vertex AI (us-central1)
-→ Prints your reasoningEngine ID.
+GitHub: mtoscano84/sports-agent-adk-mcp-alloydb
 
-**3️⃣ Remote Test via Test Client**
+---
 
-      cd testclient
-      python3 remote_test.py
+## ⚙️ Steps Followed
 
-→ Confirms the deployed agent generates and scores images remotely.
+I completed every step from the official Google Codelab, including:
 
-**4️⃣ Run A2A API Server**
+**1. Environment Setup**
 
-      cd image_scoring_adk_a2a_server
-      export GOOGLE_CLOUD_PROJECT=assignment2-476319
-      export GOOGLE_CLOUD_LOCATION=us-central1
-      export GCS_BUCKET_NAME=soumya-unique-bucket
-      adk api_server --a2a --port 8001 remote_a2a
+* Created a new GCP project and enabled required APIs
+(aiplatform.googleapis.com, alloydb.googleapis.com, etc.)
 
-**5️⃣ Test A2A Agent**
+* Configured Cloud Shell and cloned the reference repository
 
-      curl http://localhost:8001/a2a/image_scoring/.well-known/agent.json
+**2. AlloyDB Setup**
+
+* Created an AlloyDB cluster and instance
+
+* Enabled Public IP Connectivity
+
+* Authorized Cloud Shell IP range (e.g., 10.88.0.0/16)
+
+**3. Vertex AI Integration**
+
+* Retrieved the Project Number and granted IAM roles
+(roles/aiplatform.user) to the AlloyDB service account
+
+**4. Database Initialization**
+
+* Accessed AlloyDB Studio
+
+* Created required tables (users, products, orders, etc.)
+
+* Inserted a sample user record matching my GCP email ID
+
+**5. Authorization Service Setup**
+
+* Enabled PostGIS extension for spatial queries
+
+* Added sample data and verified access controls
+
+**6. Application Deployment**
+
+* Built and ran the ADK E-Commerce Agent locally
+
+* Tested connection to Vertex AI and AlloyDB
+
+* Verified end-to-end flow: query → model → DB → response
+
+---
+
+## 🧱 Tech Stack
+
+| Component | Technology Used |
+|------------|----------------|
+| **Database** | AlloyDB (PostgreSQL-compatible with vector support) |
+| **AI Services** | Vertex AI (models + embeddings) |
+| **Agent Framework** | Google Agent Developer Kit (ADK) |
+| **Backend** | Python / Node.js (as per Codelab reference) |
+| **Deployment** | Google Cloud Shell & GCP Console |
+| **Security** | IAM Roles, OAuth Client, Authorization Service |
+
+---
+
+## 🧩 Key Learnings
+
+* Seamless integration of AlloyDB with Vertex AI for hybrid relational-vector workloads
+
+* Using ADK to rapidly build secure, production-grade conversational agents
+
+* Practical experience with IAM roles, Public IP configuration, and service account permissions
+
+* Understanding PostGIS for location-based data storage
+
+---
+
+## 📦 Repository Contents
+
+      E_ECommerceAgent/
+       ├── sports-agent-adk-mcp-alloydb/
+       │   ├── src/
+       │   ├── scripts/
+       │   ├── .env.example
+       │   ├── requirements.txt / package.json
+       │   └── README.md  ← (this file)
+
+---
+
+## 🚀 Running the Agent
+
+      # 1. Clone the repo
+      git clone https://github.com/BharathiVetukuri/CMPE-297_SpecialTopics.git
+      cd 3_E2E_GoogleADK_AgentApplications/E_ECommerceAgent/sports-agent-adk-mcp-alloydb
       
-      curl -X POST http://localhost:8001/a2a/image_scoring \
-        -H 'Content-Type: application/json' \
-        -d '{
-          "id": "uuid-123",
-          "params": {
-            "message": {
-              "messageId": "msg-456",
-              "parts": [{"text": "Create an image of a Bengal cat with emerald eyes"}],
-              "role": "user"
-            }
-          }
-        }'
-→ The image is generated, scored, and uploaded to your GCS bucket.
+      # 2. Install dependencies
+      npm install   # or pip install -r requirements.txt
+      
+      # 3. Configure environment variables
+      cp .env.example .env
+      # Add your CLIENT_ID, PROJECT_ID, and DB credentials
+      
+      # 4. Start the agent
+      npm start
+      # or python main.py
 
-## 🧾 Sample Results
-Generated Images:
-
-      gs://soumya-unique-bucket/2025-10-28/af146911-a976-4efa-8063-3ed303e14b99/generated_image_0.png
-
-<img width="468" height="700" alt="image" src="https://github.com/user-attachments/assets/20548f9a-5bc8-4af9-a260-1b65bcc5407a" />
-
-
-## 🧰 Tech Stack
-
-* Google ADK v1.8.0
-* Vertex AI Agent Engine
-* Google Cloud Storage
-* Python 3.12 / Poetry
-* A2A Protocol 0.2.6
-* gcloud / gsutil CLI
-
-## 🧹 Repository Structure
-
-
-multiagenthandson/
-
-│
-
-├── image_scoring/                   # Root + sub-agents
-
-│   ├── agent.py
-
-│   ├── deploy.py
-
-│   └── sub_agents/
-
-│
-
-├── image_scoring_adk_a2a_server/    # A2A server implementation
-
-│
-
-├── testclient/                      # Remote test scripts
-
-│
-
-├── dist/                            # Build artifacts (.whl, .tar.gz)
-
-├── screenshots/                     # PNG/JPG screenshots for README
-
-├── artifacts/                       # Synced GCS outputs (optional)
-
-└── README.md
