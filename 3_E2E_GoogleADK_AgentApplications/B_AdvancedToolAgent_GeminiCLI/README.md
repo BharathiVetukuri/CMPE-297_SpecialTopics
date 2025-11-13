@@ -1,170 +1,163 @@
-# 🧠 Multi-Agent Image Scoring System using Google ADK, MCP & A2A
+# 🚀 Gemini CLI on ADK — Automated Code Intelligence Agent
 
-## 🎯 Overview
-
-This project implements a **multi-agent system** using the **Google Agent Development Kit (ADK)** and **Action-to-Action (A2A)** protocol.  
-It demonstrates how to design, deploy, and interact with agents that can:
-
-- Generate high-quality images based on natural-language prompts  
-- Score the generated images against defined content and design guidelines  
-- Deploy seamlessly to **Vertex AI Agent Engine** for scalable inference  
-- Interoperate via the **A2A API layer**
-
-This project was completed as part of the **MCP and A2A Codelabs Assignment**.
+> **Advanced Tool Agent Assignment**  
+> *Build an advanced tool agent which uses Gemini CLI as a tool inside an ADK pipeline.*
 
 ---
 
 ## 🎥 Demo Video
-🎬 Watch the full walkthrough here: https://youtu.be/DxUCDeCzgjk 
+
+**🔗 https://youtu.be/Mh2f4zksPkE**
 
 ---
 
-## 📸 Screenshots
+## 📖 Overview
 
-**ADK Web UI**
+This project integrates **Gemini CLI’s non-interactive mode** into a **Google ADK (Agent Development Kit)** pipeline, creating a powerful autonomous development assistant capable of:
 
-<img width="700" height="500" alt="Screenshot 2025-10-27 at 4 40 48 PM" src="https://github.com/user-attachments/assets/9b0943e8-52b2-48d4-8d14-8e1b5f375174" />
+- Intelligent file and module analysis  
+- Automated test-plan generation and code refactoring  
+- Context-aware file editing and development command execution  
+- Running seamlessly inside **ADK Dev UI** and **Cloud Run**
 
-
-<img width="350" height="500" alt="catbytropicalbeach" src="https://github.com/user-attachments/assets/f47e1703-c8b9-4421-baf8-24527e98b4d2" />
-
-
-<img width="350" height="500" alt="peacefulmountainlandscapeatsunset" src="https://github.com/user-attachments/assets/4a84820e-78cd-4125-9f4d-1a033b3c8f33" />
-
----
-**Image Scoring**
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 9 14 26 PM" src="https://github.com/user-attachments/assets/ffea8470-f3a2-4558-a7bd-bdbbe028f759" />
-
----
-**Agent (Vertex AI) Build Logs**
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 8 49 05 PM" src="https://github.com/user-attachments/assets/7e4e2cdb-dcfc-4437-90df-9fae32fbb868" />
-
----
-**Vertex AI Deployment**
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 5 20 24 PM" src="https://github.com/user-attachments/assets/36f88b76-87f7-4bdf-9a58-320ed9ba9d86" />
-
-
----
-**A2A Agent Test**	
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 8 48 38 PM" src="https://github.com/user-attachments/assets/d612342c-2fde-471f-9abf-58c561f38d23" />
-
-<img width="800" height="500" alt="Screenshot 2025-10-27 at 8 57 09 PM" src="https://github.com/user-attachments/assets/834ee073-6a03-4b4f-ae87-02014b8dc93e" />
-
+It combines **LLM reasoning** with **tool execution** to form a developer agent that can understand your codebase, perform real-world engineering tasks, and respond conversationally.
 
 ---
 
-## 🧩 Architecture
+## ✨ Key Features
 
-<img width="700" height="500" alt="image" src="https://github.com/user-attachments/assets/580b07a8-abe8-49ef-b9f5-1fde7ee3d8c5" />
+| Feature | Description |
+|----------|--------------|
+| ✅ **Gemini CLI Integration** | Wraps Gemini CLI’s headless mode; executes deep code analysis and file discovery. |
+| ⚙️ **Automated Software Development Tasks** | Generate test plans, create unit tests, explain code modules, suggest improvements, and refactor code. |
+| 🤖 **ADK Integration** | Exposes Gemini CLI as a callable tool inside a Google ADK Agent; accessible via Dev UI or CLI. |
+| ☁️ **Cloud-Ready Deployment** | Includes Cloud Build + Cloud Run configs for one-click deployment. |
+| 🧠 **End-to-End Intelligence** | Combines Gemini CLI reasoning with ADK’s agent orchestration and FastAPI-based UI. |
 
+---
 
-## Components
+## 🧩 Project Structure
 
-* image_scoring/	--- Contains the ADK-based root and sub-agents (generation + scoring).
-* image_scoring_adk_a2a_server/ ---	Runs the A2A API server for agent-to-agent communication.
-* testclient/	--- Local test scripts to trigger remote reasoning-engine calls.
-* dist/	--- Wheel and build artifacts generated for deployment.
-* Vertex AI Agent Engine	--- Managed runtime used to deploy and test the agent remotely.
-* GCS Bucket	--- Stores generated images and deployment packages.
+      gemini-cli-on-adk/
+      ├── app/ # Core ADK agent + Gemini CLI tool
+      │ ├── agent.py # Main agent integrating Gemini CLI
+      │ ├── server.py # FastAPI server powering ADK Dev UI
+      │ └── utils/ # Helper utilities
+      ├── deployment/ # Cloud Run deployment configs
+      ├── notebooks/ # Experiments & exploratory notebooks
+      ├── tests/ # Unit tests and automation scripts
+      ├── cloudbuild.yaml # Cloud Build pipeline for deployment
+      ├── Dockerfile # Container image configuration
+      ├── pyproject.toml # Poetry / dependency management
+      └── README.md
 
-## 🚀 Execution Summary
+---
 
-**1️⃣ Local ADK Testing**
+## ⚙️ Installation & Setup
 
-      adk web
+### 1️⃣ Clone the Repository
 
-→ Open the ADK web UI → test prompts like "Generate an image of a cat riding a bicycle"
+      git clone https://github.com/your-username/gemini-cli-on-adk.git
+      cd gemini-cli-on-adk
 
-**2️⃣ Deploy to Vertex AI Agent Engine**
+### 2️⃣ Install Dependencies
 
-      python3 -m image_scoring.deploy
+      pip install -U pip poetry
+      poetry install --no-root
 
-→ Creates an Agent Engine on Vertex AI (us-central1)
-→ Prints your reasoningEngine ID.
+### 3️⃣ Configure Gemini CLI
 
-**3️⃣ Remote Test via Test Client**
-
-      cd testclient
-      python3 remote_test.py
-
-→ Confirms the deployed agent generates and scores images remotely.
-
-**4️⃣ Run A2A API Server**
-
-      cd image_scoring_adk_a2a_server
-      export GOOGLE_CLOUD_PROJECT=assignment2-476319
-      export GOOGLE_CLOUD_LOCATION=us-central1
-      export GCS_BUCKET_NAME=soumya-unique-bucket
-      adk api_server --a2a --port 8001 remote_a2a
-
-**5️⃣ Test A2A Agent**
-
-      curl http://localhost:8001/a2a/image_scoring/.well-known/agent.json
+      Install Gemini CLI globally:
       
-      curl -X POST http://localhost:8001/a2a/image_scoring \
-        -H 'Content-Type: application/json' \
-        -d '{
-          "id": "uuid-123",
-          "params": {
-            "message": {
-              "messageId": "msg-456",
-              "parts": [{"text": "Create an image of a Bengal cat with emerald eyes"}],
-              "role": "user"
-            }
-          }
-        }'
-→ The image is generated, scored, and uploaded to your GCS bucket.
+      nvm install 20
+      npm install -g @google/gemini-cli
+      gemini
 
-## 🧾 Sample Results
-Generated Images:
+      Then create a .env file:
 
-      gs://soumya-unique-bucket/2025-10-28/af146911-a976-4efa-8063-3ed303e14b99/generated_image_0.png
+      cat > .env << 'EOF'
+      # Gemini CLI Configuration
+      GEMINI_CLI_BIN="gemini"
+      GEMINI_CLI_TIMEOUT="120"
+      EOF
 
-<img width="468" height="700" alt="image" src="https://github.com/user-attachments/assets/20548f9a-5bc8-4af9-a260-1b65bcc5407a" />
+---
+
+## ▶️ Running the Project
+
+### Run Agent in CLI Mode
+      
+
+      poetry run adk run app
+      
+      
+      You’ll enter an interactive chat session:
+      
+      Running agent gemini_cli_agent. Type exit to quit.
+
+### Run ADK Dev UI (FastAPI)
+
+      poetry run uvicorn app.server:app --host 0.0.0.0 --port 8080
+
+---
+
+## Prompts Used and Agent Response in Web UI
+
+### 1. Explain the codebase
+
+<img width="840" height="527" alt="Screenshot 2025-11-12 at 8 39 28 PM" src="https://github.com/user-attachments/assets/24c99914-b3ad-461d-9de5-873354fe3849" />
+
+### 2. Generate a test plan for this project.
+
+<img width="840" height="527" alt="Screenshot 2025-11-12 at 8 39 40 PM" src="https://github.com/user-attachments/assets/5e086b2a-4763-4d85-b57f-ca4d75fb12fa" />
+
+### 3. Can you create a readme.md file for this?
+
+<img width="840" height="527" alt="Screenshot 2025-11-12 at 8 43 38 PM" src="https://github.com/user-attachments/assets/037b19ba-263b-4803-90a4-d28e8c587269" />
+
+---
+
+##  🧱 Architecture Overview
 
 
-## 🧰 Tech Stack
+            User (Prompt)
+                   │
+                   ▼
+              ┌──────────────────────────────┐
+              │  ADK Agent (app/agent.py)   │
+              │  ─ Handles conversation      │
+              │  ─ Invokes tools             │
+              └──────────────┬───────────────┘
+                             │
+                             ▼
+                   ┌─────────────────────┐
+                   │ Gemini CLI Tool     │
+                   │ (non-interactive)   │
+                   ├─────────────────────┤
+                   │  Code discovery     │
+                   │  Deep analysis      │
+                   │  Test generation    │
+                   │  Refactoring        │
+                   └─────────────────────┘
+                             │
+                             ▼
+                    ┌────────────────────┐
+                    │  FastAPI / ADK UI │
+                    │  Cloud Run Ready   │
+                    └────────────────────┘
 
-* Google ADK v1.8.0
-* Vertex AI Agent Engine
-* Google Cloud Storage
-* Python 3.12 / Poetry
-* A2A Protocol 0.2.6
-* gcloud / gsutil CLI
+---
 
-## 🧹 Repository Structure
+## 🧠 How It Works
+
+| Component | Role |
+|------------|------|
+| **Gemini CLI** | Performs actual code intelligence using non-interactive mode. |
+| **ADK Agent (`app/agent.py`)** | Acts as orchestrator; passes user tasks to Gemini CLI. |
+| **FastAPI Server (`app/server.py`)** | Exposes Dev UI and REST endpoints. |
+| **Cloud Build + Run** | Enables deployment of the interactive agent as a microservice. |
 
 
-multiagenthandson/
 
-│
 
-├── image_scoring/                   # Root + sub-agents
 
-│   ├── agent.py
-
-│   ├── deploy.py
-
-│   └── sub_agents/
-
-│
-
-├── image_scoring_adk_a2a_server/    # A2A server implementation
-
-│
-
-├── testclient/                      # Remote test scripts
-
-│
-
-├── dist/                            # Build artifacts (.whl, .tar.gz)
-
-├── screenshots/                     # PNG/JPG screenshots for README
-
-├── artifacts/                       # Synced GCS outputs (optional)
-
-└── README.md
