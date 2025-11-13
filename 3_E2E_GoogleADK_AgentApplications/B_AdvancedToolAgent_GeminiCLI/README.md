@@ -1,6 +1,6 @@
 # 🚀 Gemini CLI on ADK — Automated Code Intelligence Agent
 
-> **Advanced Tool Agent Assignment**  
+> **Advanced Tool Agent**  
 > *Build an advanced tool agent which uses Gemini CLI as a tool inside an ADK pipeline.*
 
 ---
