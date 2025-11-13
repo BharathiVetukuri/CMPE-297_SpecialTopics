@@ -7,11 +7,6 @@ Watch the full walkthrough here: https://youtu.be/dzwmOLKzNMI
 
 ---
 
-## 📸 Screenshots
-
-
----
-
 ## 📘 Overview
 
 The E-Commerce Agent is a conversational AI system that integrates Google Vertex AI, AlloyDB, and ADK (Agent Developer Kit) to enable intelligent product discovery, recommendation, and customer interaction.
@@ -141,3 +136,65 @@ I completed every step from the official Google Codelab, including:
       npm start
       # or python main.py
 
+---
+
+## 📸 Screenshots
+
+#### AlloyDB Cluster
+
+<img width="880" height="400" alt="image" src="https://github.com/user-attachments/assets/a2f64a5f-92b5-41b5-aac2-56d0b583faa9" />
+
+
+#### Loading Database
+
+<img width="840" height="468" alt="Screenshot 2025-11-13 at 12 06 38 AM" src="https://github.com/user-attachments/assets/4171e3a3-f6b1-4c51-b583-f91b98d7e4bf" />
+
+<img width="840" height="445" alt="Screenshot 2025-11-13 at 12 12 35 AM" src="https://github.com/user-attachments/assets/db4de32e-f652-424f-bf01-82827dddb7ed" />
+
+
+<img width="840" height="443" alt="Screenshot 2025-11-13 at 12 18 56 AM" src="https://github.com/user-attachments/assets/bb8f1104-3939-41ed-b99c-06482717f435" />
+
+
+#### Authorization Service Setup
+
+<img width="840" height="420" alt="Screenshot 2025-11-13 at 12 20 56 AM" src="https://github.com/user-attachments/assets/0c03a85b-7a70-4ec3-b69d-00469aea8bf9" />
+
+<img width="840" height="456" alt="Screenshot 2025-11-13 at 12 24 30 AM" src="https://github.com/user-attachments/assets/b22675c4-be57-40aa-9813-3aa4b81cf82b" />
+
+<img width="840" height="456" alt="Screenshot 2025-11-13 at 12 25 46 AM" src="https://github.com/user-attachments/assets/2bef80d4-c1a7-484d-8385-19194f75bb2c" />
+
+
+<img width="840" height="356" alt="Screenshot 2025-11-13 at 12 26 23 AM" src="https://github.com/user-attachments/assets/4b1e68b6-8a3d-4399-8f20-3b7bb954d50d" />
+
+
+<img width="840" height="376" alt="Screenshot 2025-11-13 at 12 28 43 AM" src="https://github.com/user-attachments/assets/485916dc-0662-40d1-b011-7362e0b0560b" />
+
+
+#### MCP ToolBox Setup
+
+<img width="840" height="376" alt="Screenshot 2025-11-13 at 12 38 04 AM" src="https://github.com/user-attachments/assets/6f7bcaad-b327-4423-bebf-bb9169ab0ee8" />
+
+<img width="840" height="376" alt="Screenshot 2025-11-13 at 12 38 14 AM" src="https://github.com/user-attachments/assets/d8345ae4-93cd-46ea-93df-b4b144144029" />
+
+<img width="840" height="584" alt="Screenshot 2025-11-13 at 12 38 58 AM" src="https://github.com/user-attachments/assets/1f684750-0c38-49d4-acee-bcb915205075" />
+
+
+#### Agent Build on ADK
+
+<img width="940" height="238" alt="Screenshot 2025-11-13 at 12 52 53 AM" src="https://github.com/user-attachments/assets/4eebbfed-ba24-4a6f-830e-394287c78510" />
+
+
+#### Frontend Deployment
+
+<img width="940" height="554" alt="Screenshot 2025-11-13 at 12 57 43 AM" src="https://github.com/user-attachments/assets/c4620946-8997-4049-bf5a-9e1a3abf3111" />
+
+
+<img width="940" height="554" alt="Screenshot 2025-11-13 at 12 58 01 AM" src="https://github.com/user-attachments/assets/8c32ea4c-2eb8-4011-ab52-5f38a014528f" />
+
+
+#### Run Agent and Prompts Testing
+
+<img width="940" height="554" alt="Screenshot 2025-11-13 at 12 59 46 AM" src="https://github.com/user-attachments/assets/adfd3e95-536c-49f1-805a-60e96cd2c05e" />
+
+
+<img width="940" height="554" alt="Screenshot 2025-11-13 at 1 00 28 AM" src="https://github.com/user-attachments/assets/23a42a5c-b9f8-407b-8662-5bcad01d77f2" />
