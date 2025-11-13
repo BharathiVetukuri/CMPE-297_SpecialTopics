@@ -3,7 +3,7 @@
 This project implements a production-quality AI-powered E-Commerce Agent using Google’s Agent Developer Kit (ADK) and AlloyDB following the official Google Codelab
 
 ## 🎥 Demo Video
-Watch the full walkthrough here: https://youtu.be/DxUCDeCzgjk 
+Watch the full walkthrough here: https://youtu.be/dzwmOLKzNMI 
 
 ---
 
