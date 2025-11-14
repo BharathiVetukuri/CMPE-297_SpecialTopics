@@ -1,0 +1,1 @@
+entrypoint: code_review_assistant.agent:root_agent
